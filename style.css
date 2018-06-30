@@ -1,0 +1,3073 @@
+@-moz-keyframes overlay-slide-in-right {
+    0% {
+        width: 100%
+    }
+    to {
+        width: 0%
+    }
+}
+
+@-webkit-keyframes overlay-slide-in-right {
+    0% {
+        width: 100%
+    }
+    to {
+        width: 0%
+    }
+}
+
+@-o-keyframes overlay-slide-in-right {
+    0% {
+        width: 100%
+    }
+    to {
+        width: 0%
+    }
+}
+
+@keyframes overlay-slide-in-right {
+    0% {
+        width: 100%
+    }
+    to {
+        width: 0%
+    }
+}
+
+@-moz-keyframes overlay-slide-out-left {
+    0% {
+        width: 0%
+    }
+    to {
+        width: 100%
+    }
+}
+
+@-webkit-keyframes overlay-slide-out-left {
+    0% {
+        width: 0%
+    }
+    to {
+        width: 100%
+    }
+}
+
+@-o-keyframes overlay-slide-out-left {
+    0% {
+        width: 0%
+    }
+    to {
+        width: 100%
+    }
+}
+
+@keyframes overlay-slide-out-left {
+    0% {
+        width: 0%
+    }
+    to {
+        width: 100%
+    }
+}
+
+@font-face {
+    font-family: RajdhaniLight;
+    src: url(../../fonts/rajdhani/Rajdhani-Light.ttf)
+}
+
+@font-face {
+    font-family: RajdhaniRegular;
+    src: url(../../fonts/rajdhani/Rajdhani-Regular.ttf)
+}
+
+@font-face {
+    font-family: RajdhaniMedium;
+    src: url(../../fonts/rajdhani/Rajdhani-Medium.ttf)
+}
+
+@font-face {
+    font-family: RajdhaniSemibold;
+    src: url(../../fonts/rajdhani/Rajdhani-SemiBold.ttf)
+}
+
+@font-face {
+    font-family: RajdhaniBold;
+    src: url(../../fonts/rajdhani/Rajdhani-Bold.ttf)
+}
+
+@font-face {
+    font-family: GothamProMedium;
+    src: url(../../fonts/gotham/GothamProMedium.ttf)
+}
+
+.home-content nav.content-nav,
+nav.nav-block {
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-flow: row nowrap
+}
+
+nav.nav-block {
+    opacity: 1;
+    top: 0;
+    user-select: none;
+    height: 90px;
+    min-width: 440px;
+    transition: all .5s cubic-bezier(.215, .61, .355, 1);
+    width: 56.7vw;
+    z-index: 100
+}
+
+nav.nav-block.video-content-mask-state {
+    opacity: .1;
+    transition: all .5s cubic-bezier(.215, .61, .355, 1)
+}
+
+nav.nav-block .logo {
+    content: url(../img/logo.svg);
+    display: block;
+    height: 90px;
+    width: 90px;
+    background-color: #000;
+    cursor: pointer;
+    margin-right: 65px
+}
+
+nav.nav-block .nav-mob-btn,
+nav.nav-block .nav-wrap .nav-list span.year {
+    display: none
+}
+
+nav.nav-block .nav-wrap {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+nav.nav-block .nav-wrap .nav-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%
+}
+
+nav.nav-block .nav-wrap .nav-list a.nav-elem {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden
+}
+
+nav.nav-block .nav-wrap .nav-list a.nav-elem span {
+    width: 56px;
+    height: 23px;
+    text-align: center;
+    line-height: 24px;
+    opacity: .6;
+    color: #fff;
+    font-family: RajdhaniSemibold;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all .3s
+}
+
+nav.nav-block .nav-wrap .nav-list a.nav-elem::before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 23px;
+    width: 56px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    left: -50%;
+    top: 50%;
+    transition: left .4s ease
+}
+
+nav.nav-block .nav-wrap .nav-list a.nav-elem.active span,
+nav.nav-block .nav-wrap .nav-list a.nav-elem:hover span {
+    color: #000;
+    font-family: RajdhaniBold;
+    font-weight: 700;
+    opacity: 1
+}
+
+nav.nav-block .nav-wrap .nav-list a.nav-elem.active::before,
+nav.nav-block .nav-wrap .nav-list a.nav-elem:hover::before {
+    left: 50%
+}
+
+.home-content,
+aside.sidebar-block {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    user-select: none
+}
+
+aside.sidebar-block {
+    transition: all 1s;
+    position: fixed;
+    display: block;
+    width: 6.25vw;
+    height: 100vh;
+    z-index: 100
+}
+
+aside.sidebar-block .sidebar-wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 100%
+}
+
+aside.sidebar-block .sidebar-wrap .sidebar-progressbar {
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+aside.sidebar-block .sidebar-wrap .sidebar-progressbar .track {
+    width: inherit;
+    height: inherit
+}
+
+aside.sidebar-block .sidebar-wrap .sidebar-progressbar .track .track-elem {
+    width: inherit;
+    height: 0%;
+    background-color: #fff;
+    transition: height .4s ease
+}
+
+aside.sidebar-block .sidebar-wrap .sidebar-list {
+    transition: all .5s cubic-bezier(.6, 0, .5, 1);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 57.5vh;
+    min-height: 200px;
+    padding-top: 5.6vh;
+    mix-blend-mode: exclusion
+}
+
+aside.sidebar-block .sidebar-wrap .sidebar-list .list-elem {
+    opacity: .6;
+    transform: rotate(90deg);
+    color: #fff;
+    font-family: RajdhaniSemibold;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: fit-content
+}
+
+aside.sidebar-block .sidebar-wrap .sidebar-list .list-elem:hover,
+aside.sidebar-block .sidebar-wrap .sidebar-zipl a:hover {
+    opacity: 1
+}
+
+aside.sidebar-block .sidebar-wrap .sidebar-list .list-elem .mail {
+    content: url(../../../img/sidebar-email-icon.svg)
+}
+
+aside.sidebar-block .sidebar-wrap .sidebar-zipl {
+    margin-top: auto;
+    padding-bottom: 4.5vh;
+    mix-blend-mode: exclusion
+}
+
+aside.sidebar-block .sidebar-wrap .sidebar-zipl a {
+    margin: 0 auto;
+    content: url(../../../img/zipl.svg);
+    cursor: pointer;
+    opacity: .6
+}
+
+.home-content {
+    left: 0;
+    -webkit-touch-callout: none
+}
+
+.home-content .swiper-container {
+    height: 100%
+}
+
+.home-content .content-wrap {
+    height: 75vh
+}
+
+.home-content .content-wrap article.content-item {
+    width: 100vw;
+    background: #222
+}
+
+.home-content .content-wrap article.content-item .background {
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.home-content .content-wrap article.content-item .background .image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform: scale(1)
+}
+
+.home-content .content-wrap article.content-item .background .response-image {
+    display: none
+}
+
+.home-content .content-wrap article.content-item .background .mask {
+    background: url(../../../img/article-mask.svg);
+    background-size: 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5
+}
+
+.home-content .content-wrap article.content-item.swiper-slide-next .background .image {
+    transform: scale(1);
+    will-change: transform;
+    transition: all 1s
+}
+
+.home-content .content-wrap article.content-item.swiper-slide-next .background .mask {
+    will-change: transform
+}
+
+.home-content .content-wrap article.content-item.swiper-slide-prev .background .image {
+    transform: scale(3);
+    will-change: transform;
+    transition: all 1s
+}
+
+.home-content .content-wrap article.content-item.swiper-slide-prev .background .mask {
+    will-change: transform
+}
+
+.home-content .content-wrap article.content-item.swiper-slide-active .background .image {
+    transform: scale(1);
+    will-change: transform;
+    transition: all 1s
+}
+
+.home-content .content-wrap article.content-item.swiper-slide-active .background .mask {
+    will-change: transform
+}
+
+.home-content .content-text-slider {
+    z-index: 10
+}
+
+.home-content .content-text-slider .content-text-wrap article.content-text-item .article-text-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 27.6vh 30vw 17.5vh 6.3vw;
+    z-index: 5
+}
+
+.home-content .content-text-slider .content-text-wrap article.content-text-item .article-text-content .article-text-content-wrap {
+    overflow: hidden
+}
+
+.home-content .content-text-slider .content-text-wrap article.content-text-item .article-text-content .article-text-content-wrap h3 {
+    display: none;
+    color: #fff;
+    font-family: RajdhaniSemibold;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin-bottom: 2vh;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all .85s ease;
+    transform: translateY(0);
+    margin-left: .5vw
+}
+
+.home-content .content-text-slider .content-text-wrap article.content-text-item .article-text-content .article-text-content-wrap h2 {
+    display: none;
+    color: #fff;
+    font-family: GothamProMedium;
+    font-size: 7vw;
+    font-weight: 500;
+    line-height: 12.75vh;
+    text-transform: uppercase;
+    letter-spacing: -.3px;
+    transition: all .9s ease;
+    transform: translateX(0);
+    margin-left: .5vw
+}
+
+.home-content .content-text-slider .content-text-wrap article.content-text-item.swiper-slide-next .article-text-content .article-text-content-wrap h3 {
+    display: block;
+    opacity: 0;
+    transform: translateY(-10px);
+    will-change: transform, opacity
+}
+
+.home-content .content-text-slider .content-text-wrap article.content-text-item.swiper-slide-next .article-text-content .article-text-content-wrap h2 {
+    display: block;
+    opacity: 0;
+    transform: translateX(-100%);
+    will-change: transform, opacity
+}
+
+.home-content .content-text-slider .content-text-wrap article.content-text-item.swiper-slide-prev .article-text-content .article-text-content-wrap h3 {
+    display: block;
+    opacity: 0;
+    transform: translateY(10px);
+    will-change: transform, opacity
+}
+
+.home-content .content-text-slider .content-text-wrap article.content-text-item.swiper-slide-prev .article-text-content .article-text-content-wrap h2 {
+    display: block;
+    opacity: 0;
+    transform: translateX(100%);
+    will-change: transform, opacity
+}
+
+.home-content .content-text-slider .content-text-wrap article.content-text-item.swiper-slide-active .article-text-content .article-text-content-wrap h3 {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    will-change: transform, opacity
+}
+
+.home-content .content-text-slider .content-text-wrap article.content-text-item.swiper-slide-active .article-text-content .article-text-content-wrap h2 {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+    will-change: transform, opacity
+}
+
+.home-content .article-nav-block,
+.home-content .content-text-slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.home-content .article-nav-block .article-nav-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.home-content .article-nav-block .article-nav-wrap .article-nav {
+    position: absolute;
+    left: 6.3vw;
+    right: 0;
+    bottom: 32.5vh;
+    z-index: 5
+}
+
+.home-content .article-nav-block .article-nav-wrap .article-nav .counter {
+    color: #fff;
+    font-family: RajdhaniSemibold;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    margin-bottom: 16px;
+    letter-spacing: 2px
+}
+
+.home-content .article-nav-block .article-nav-wrap .article-nav .track {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, .25)
+}
+
+.home-content .article-nav-block .article-nav-wrap .article-nav .track .track-elem {
+    width: auto;
+    height: 100%;
+    background: #fff;
+    transition: all .8s cubic-bezier(.6, 0, .5, 1)
+}
+
+.home-content nav.content-nav {
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 25vh;
+    background: #222;
+    z-index: 20
+}
+
+.home-content nav.content-nav .scroll-tooltip {
+    position: relative;
+    height: 100%;
+    width: 6.25vw;
+    background-color: #000
+}
+
+.home-content nav.content-nav .scroll-tooltip .scrolldown-wrap {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%
+}
+
+.home-content nav.content-nav .scroll-tooltip .scrolldown-wrap .scrolldown {
+    position: relative;
+    top: 33%;
+    display: flex;
+    flex-flow: row nowrap;
+    transform: rotate(-90deg);
+    color: #fff;
+    font-family: RajdhaniBold;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px
+}
+
+.home-content nav.content-nav .scroll-tooltip .scrolldown-wrap .scrolldown::before {
+    content: url(../../../img/triangle.svg);
+    transform: rotate(90deg);
+    position: absolute;
+    left: -22px
+}
+
+.home-content nav.content-nav .scroll-tooltip .scrolldown-wrap .scrolldown span {
+    margin-left: 7px;
+    opacity: .6;
+    font-family: RajdhaniRegular
+}
+
+.home-content nav.content-nav .navigation {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 100%;
+    width: 31.25vw;
+    background: #fff;
+    padding: 7vh 2.7vw 3.5vh 3.4vw
+}
+
+.home-content nav.content-nav .navigation .title {
+    color: #000;
+    font-family: RajdhaniSemibold;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    text-transform: uppercase;
+    letter-spacing: 1px
+}
+
+.home-content nav.content-nav .navigation .controls-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%
+}
+
+.about-content .page-title,
+.home-content nav.content-nav .navigation .controls-row .counter {
+    display: flex;
+    flex-flow: column nowrap
+}
+
+.home-content nav.content-nav .navigation .controls-row .counter .separator {
+    height: 1px;
+    width: 8px;
+    background-color: #000;
+    margin: 6px 0
+}
+
+.home-content nav.content-nav .navigation .controls-row .counter .elem.to {
+    opacity: .4
+}
+
+.home-content nav.content-nav .navigation .controls-row .counter .elem .text {
+    color: #000;
+    font-family: RajdhaniSemibold;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: .5px
+}
+
+.home-content nav.content-nav .navigation .controls-row .nav-elems {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 2px;
+    width: 130px
+}
+
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem {
+    color: #000;
+    font-family: RajdhaniSemibold;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 60px;
+    height: 23px;
+    letter-spacing: 1px
+}
+
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem::before {
+    line-height: 23px
+}
+
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem.prev {
+    text-align: right;
+    padding-right: 10px;
+    position: relative
+}
+
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem.prev::before {
+    display: block;
+    position: absolute;
+    content: url(../../../img/nav-triangle-black.svg);
+    transform: rotate(0deg);
+    left: 8px
+}
+
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem.next.active,
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem.next:hover,
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem.prev.active,
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem.prev:hover {
+    position: relative
+}
+
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem.prev.active::before,
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem.prev:hover::before {
+    display: block;
+    position: absolute;
+    content: url(../../../img/nav-triangle-white.svg);
+    transform: rotate(180deg)
+}
+
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem.next {
+    text-align: left;
+    padding-left: 10px;
+    position: relative
+}
+
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem.next::before {
+    display: block;
+    position: absolute;
+    content: url(../../../img/nav-triangle-black.svg);
+    transform: rotate(180deg);
+    right: 8px
+}
+
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem.next.active::before,
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem.next:hover::before {
+    display: block;
+    position: absolute;
+    content: url(../../../img/nav-triangle-white.svg);
+    transform: rotate(0deg)
+}
+
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem.active,
+.home-content nav.content-nav .navigation .controls-row .nav-elems .elem:hover {
+    background: #000;
+    color: #fff
+}
+
+.home-content nav.content-nav .media {
+    height: 100%;
+    width: 62.5vw;
+    background: #222
+}
+
+.home-content nav.content-nav .media .media-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.home-content nav.content-nav .media .media-wrap .media-slide {
+    overflow: visible;
+    width: inherit;
+    height: 25vh
+}
+
+.home-content nav.content-nav .media .media-wrap .media-slide.about-slide .image {
+    background-image: url(../../../img/content/home/about-slide.jpg)
+}
+
+.home-content nav.content-nav .media .media-wrap .media-slide .image {
+    transition: all 1s;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+    background-size: 120%
+}
+
+.home-content nav.content-nav .media .media-wrap .media-slide.swiper-slide-next .image {
+    transform: translateY(20%) scale(1);
+    will-change: transform
+}
+
+.home-content nav.content-nav .media .media-wrap .media-slide.swiper-slide-prev .image {
+    transform: translateY(20%) scale(1.5);
+    will-change: transform
+}
+
+.home-content nav.content-nav .media .media-wrap .media-slide.swiper-slide-active .image {
+    transform: translateY(0) scale(1);
+    will-change: transform
+}
+
+.about-content,
+.home-content,
+.music-content {
+    position: fixed;
+    width: 100vw;
+    height: 100vh
+}
+
+.about-content .background .image {
+    background-image: url(../../../img/content/about/about-bg.jpg)
+}
+
+.about-content .page-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 62.709vw;
+    height: 100%;
+    padding: 30.5vh 12.5vw 30.5vh 6.2vw;
+    z-index: 10;
+    justify-content: space-between
+}
+
+.about-content .page-title h2 {
+    color: #fff;
+    font-family: GothamProMedium;
+    font-size: 6.97vw;
+    font-weight: 500;
+    line-height: 12.7vh;
+    letter-spacing: 1.5px;
+    text-transform: uppercase
+}
+
+.about-content .page-title .about-progress-bar .track {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .25)
+}
+
+.about-content .page-title .about-progress-bar .track .track-elem {
+    width: 0%;
+    height: 1px;
+    background-color: #fff;
+    opacity: 1;
+    transition: all .2s
+}
+
+.about-content .page-content-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    transition: all .3s cubic-bezier(.6, 0, .5, 1);
+    overflow: auto
+}
+
+.about-content .page-content-block::-webkit-scrollbar,
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block::-webkit-scrollbar,
+.video-content .video-content-block::-webkit-scrollbar,
+.video-content::-webkit-scrollbar {
+    display: none
+}
+
+.about-content .page-content-block .page-content-wrap {
+    position: absolute;
+    top: 0;
+    left: 62.709vw;
+    height: fit-content;
+    width: 30.4vw;
+    background-color: #fff
+}
+
+.about-content .page-content-block .page-content-wrap .content {
+    padding: 9vh 7.7vw
+}
+
+.about-content .page-content-block .page-content-wrap .content p em {
+    color: #000;
+    font-family: RajdhaniRegular;
+    font-size: 1.75vh;
+    line-height: 1.5;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    font-style: normal
+}
+
+.about-content .page-content-block .page-content-wrap .content p strong {
+    color: #000;
+    font-family: RajdhaniBold;
+    font-size: 1.8vh;
+    font-weight: 700;
+    line-height: 1;
+    font-style: normal;
+    margin: .9vh 0
+}
+
+.about-content .page-content-block .page-content-wrap .content p strong:first-child {
+    margin-top: 2vh
+}
+
+.about-content .page-content-block .page-content-wrap .content p strong:last-child {
+    margin-bottom: 2vh
+}
+
+.about-content .page-content-block .page-content-wrap .content h4 {
+    padding: 0 .3vw;
+    color: #fff;
+    font-family: RajdhaniSemibold;
+    font-size: 1.75vh;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: .75vh;
+    width: max-content;
+    display: block;
+    background-color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px
+}
+
+.about-content .page-content-block .ps__rail-x,
+.about-content .page-content-block .ps__rail-y,
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-content-back-btn {
+    display: none
+}
+
+.music-content .background .image {
+    background-image: url(../../../img/content/music/music-bg-first.jpg);
+    transition: all .8s
+}
+
+.music-content .page-content-block {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10
+}
+
+.music-content .page-content-block .page-content-wrap {
+    position: relative;
+    width: 100vw;
+    height: 100vh
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 37.5vw
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 21.5vh 12.5vw 10vh 6.25vw
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap h2.album-title {
+    color: #fff;
+    font-family: GothamProMedium;
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-left: 4.2vw;
+    letter-spacing: 2.5px
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container {
+    width: 100%;
+    height: 100%;
+    padding: 5.5vh 0 14.25vh
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    user-select: none
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem {
+    position: relative;
+    width: 100%;
+    height: 3.5vh;
+    margin: 0 0 10px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s cubic-bezier(.6, 0, .5, 1)
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem .elem-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding-right: 3%
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem .elem-row .control-btn {
+    width: 10%
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem .elem-row .counter {
+    color: #fff;
+    font-size: 14px;
+    font-family: RajdhaniRegular;
+    font-weight: 400;
+    line-height: 22px;
+    width: 12.5%;
+    letter-spacing: 1px
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem .elem-row .title {
+    color: #fff;
+    font-size: 14px;
+    font-family: RajdhaniRegular;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+    width: 62.5%;
+    letter-spacing: 1px
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem .elem-row .time {
+    color: #fff;
+    font-size: 14px;
+    font-family: RajdhaniRegular;
+    font-weight: 400;
+    line-height: 18px;
+    width: 15%;
+    text-align: right;
+    letter-spacing: 1px
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem .elem-row .time.total {
+    display: block
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem .elem-progressbar,
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem .elem-row .time.current,
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active .elem-row .time.total {
+    display: none
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem:last-child {
+    margin-bottom: 0!important
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.no-transition {
+    transition: none
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active {
+    margin: 15px 0;
+    height: 4.75vh;
+    background-color: #000;
+    cursor: default
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active:first-child {
+    margin-top: 0
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active .elem-row .control-btn {
+    position: relative;
+    height: inherit;
+    width: 10%;
+    cursor: pointer;
+    padding-right: 1.25%
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active .elem-row .control-btn::before {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 45%;
+    top: 46%
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active .elem-row .control-btn.play::before {
+    content: url(../../../img/content/music/elem-play-btn.svg)
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active .elem-row .control-btn.pause::before {
+    content: url(../../../img/content/music/elem-pause-btn.svg)
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active .elem-row .counter,
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active .elem-row .time,
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active .elem-row .title {
+    color: #fff;
+    font-size: 14px;
+    font-family: RajdhaniBold;
+    font-weight: 700
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active .elem-row .time.current {
+    display: block
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active .elem-progressbar {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleY(-1)
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active .elem-progressbar .track {
+    background-color: transparent;
+    width: inherit;
+    height: inherit
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active .elem-progressbar .track .track-elem {
+    background-color: #fff;
+    width: 0;
+    height: inherit
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container {
+    position: absolute;
+    top: 0;
+    left: 62.5vw;
+    bottom: 0;
+    right: 6.25vw;
+    background-color: rgba(0, 0, 0, .25);
+    user-select: none
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block,
+section.video-player .video-player-wrap,
+section.video-player .video-player-wrap .player {
+    width: 100%;
+    height: 100%
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap {
+    width: inherit;
+    height: inherit
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem {
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    background-color: #fff;
+    cursor: pointer;
+    overflow: hidden
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .album-background {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .album-background .image {
+    position: absolute;
+    transform: translate(-50%, -50%) scale(2.05);
+    left: 50%;
+    top: 50%;
+    width: inherit;
+    height: 25vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 5;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    transition: all .4s
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .play-btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    cursor: pointer;
+    width: 36px;
+    height: 36px
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .play-btn::before {
+    content: url(../../../img/content/music/album-play-btn.svg);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .3s cubic-bezier(.6, 0, .5, 1)
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 50vh;
+    padding: 10.2vh 3vw 5vh 4vw;
+    background-color: #fff;
+    z-index: 10
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .title-row {
+    margin: 0 0 5.3vh .6vw
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .title-row .album-title {
+    color: #000;
+    font-family: RajdhaniLight;
+    font-size: 2.5vw;
+    font-weight: 300;
+    line-height: 2.1vw
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .title-row .album-subtitle {
+    color: #000;
+    font-family: RajdhaniSemibold;
+    font-size: 2vh;
+    font-weight: 600;
+    line-height: 2.5vh;
+    margin-left: 1.5%
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: auto
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .album-image {
+    position: relative;
+    display: block;
+    width: 8.612vw;
+    height: 8.612vw;
+    border-radius: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+    transform: rotate(0deg)
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .album-image .background {
+    transform: scale(1.2);
+    transition: all 1s ease;
+    background-size: cover;
+    background-position: center center
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .album-image .control-btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 38px;
+    height: 38px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .album-image .control-btn::before {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .album-image .control-btn.play::before {
+    content: url(../../../img/content/music/album-play-before.svg)
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .album-image .control-btn.pause::before {
+    content: url(../../../img/content/music/album-pause-before.svg)
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .content-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: normal;
+    width: 100%;
+    height: 100%;
+    margin-left: 3.3vw
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .content-wrap .item {
+    margin-bottom: 20px
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .content-wrap .item:nth-child(2n+1) {
+    width: 57%
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .content-wrap .item:nth-child(2n) {
+    width: 43%
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .content-wrap .item span.title {
+    display: inline-block;
+    color: #fff;
+    font-family: RajdhaniBold;
+    font-size: .85vw;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #000;
+    padding: 0 5px
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .content-wrap .item p.text {
+    color: #000;
+    font-family: RajdhaniRegular;
+    font-size: .85vw;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 7px;
+    padding-right: 20%
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem:active .play-btn::before,
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem:focus .play-btn::before,
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem:hover .play-btn::before {
+    opacity: 1
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem:active .album-background .image,
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem:focus .album-background .image,
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem:hover .album-background .image {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0)
+}
+
+.music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem.active .play-btn {
+    display: none
+}
+
+.video-content {
+    position: absolute;
+    left: 0;
+    top: 90px;
+    bottom: 0;
+    right: 6.25vw;
+    user-select: none;
+    background-color: #000;
+    overflow: hidden
+}
+
+.video-content .background .image {
+    background-image: url(../../../img/content/video/video-bg.jpeg);
+    opacity: .2
+}
+
+.video-content .video-content-block {
+    z-index: 10;
+    overflow-y: auto
+}
+
+.video-content .video-content-block .video-content-wrap {
+    width: 100%;
+    height: auto;
+    padding: 6.25vh 6.25vw
+}
+
+.video-content .video-content-block .video-content-wrap .video-content-list {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10vh
+}
+
+.video-content .video-content-block .video-content-wrap .video-content-list .video-list-item {
+    width: 50%;
+    height: 25vh;
+    padding-right: 2vw;
+    margin-bottom: 3.75vh;
+    cursor: pointer
+}
+
+.video-content .video-content-block .video-content-wrap .video-content-list .video-list-item:hover .item-wrap .video-item-image .mask-wrap {
+    opacity: 1
+}
+
+.video-content .video-content-block .video-content-wrap .video-content-list .video-list-item:hover .item-wrap .video-item-image .video-thumb {
+    filter: grayscale(0)
+}
+
+.video-content .video-content-block .video-content-wrap .video-content-list .video-list-item .item-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap
+}
+
+.video-content .video-content-block .video-content-wrap .video-content-list .video-list-item .item-wrap .video-item-image {
+    position: relative;
+    height: 100%;
+    width: 25vw;
+    flex-shrink: 0;
+    overflow: hidden
+}
+
+.video-content .video-content-block .video-content-wrap .video-content-list .video-list-item .item-wrap .video-item-image .video-thumb {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 140%;
+    filter: grayscale(100%);
+    transition: filter .4s linear
+}
+
+.video-content .video-content-block .video-content-wrap .video-content-list .video-list-item .item-wrap .video-item-image .image {
+    display: block;
+    position: absolute;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 140%;
+    height: 140%
+}
+
+.video-content .video-content-block .video-content-wrap .video-content-list .video-list-item .item-wrap .video-item-text {
+    width: 100%;
+    padding-left: 2vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end
+}
+
+.video-content .video-content-block .video-content-wrap .video-content-list .video-list-item .item-wrap .video-item-text .video-item-title {
+    color: #fff;
+    font-family: RajdhaniSemibold;
+    font-size: 2vh;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.25;
+    text-transform: uppercase
+}
+
+.video-content .video-content-block .video-content-wrap .video-content-list .video-list-item .item-wrap .video-item-text .video-item-subtitle {
+    color: #494949;
+    font-family: RajdhaniSemibold;
+    font-size: 1.75vh;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.5
+}
+
+.news-content,
+.video-content .video-content-block,
+section.video-player {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0
+}
+
+section.video-player {
+    display: none;
+    background-color: #000;
+    z-index: 110
+}
+
+section.video-player .video-player-wrap .view-btn-close {
+    position: absolute;
+    cursor: pointer;
+    right: 40px;
+    top: 40px;
+    z-index: 15
+}
+
+section.video-player .video-player-wrap .view-btn-close .view-btn-wrap {
+    position: relative;
+    height: 34px;
+    width: 34px;
+    background-color: #fff
+}
+
+section.video-player .video-player-wrap .view-btn-close .view-btn-wrap::before {
+    content: url(../../../img/content/video/hide-screen.svg);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 15px;
+    height: 15px
+}
+
+.news-content {
+    width: 100vw;
+    height: 100wh
+}
+
+.article-content .page-content-block,
+.news-content .page-content-block {
+    width: 100%;
+    height: 100%;
+    background-color: #000
+}
+
+.article-content .page-content-block .page-content-wrap,
+.news-content .page-content-block .page-content-wrap {
+    width: inherit;
+    height: inherit
+}
+
+.news-content .page-content-block .page-content-wrap .news-article-content {
+    position: absolute;
+    left: 6.25vw;
+    top: 0;
+    right: 0;
+    bottom: 11.25vh
+}
+
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap {
+    width: 100%;
+    height: 100%;
+    user-select: none
+}
+
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item {
+    height: 100%;
+    width: 25vw
+}
+
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .background .image {
+    display: block;
+    background-position: 50% 50%;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    transition: all .3s cubic-bezier(.6, 0, .5, 1)
+}
+
+.article-content .page-content-block .page-content-wrap .article-back-btn,
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .background .response-image {
+    display: none
+}
+
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .background .mask {
+    opacity: 0;
+    transition: all .3s cubic-bezier(.6, 0, .5, 1)
+}
+
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block {
+    position: absolute;
+    left: 2.77777vw;
+    right: 2.77777vw;
+    bottom: 2.77777vw;
+    z-index: 10;
+    transition: all .3s cubic-bezier(.6, 0, .5, 1)
+}
+
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: normal;
+    width: 100%
+}
+
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .date {
+    position: relative;
+    background-color: #000;
+    margin-bottom: 2vh;
+    width: fit-content;
+    padding: .375vh 1.3vw .375vh .69445vw
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap .date span,
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .date span {
+    display: inline-block;
+    color: #fff;
+    font-family: RajdhaniSemibold;
+    font-size: 1vw;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 1.5px
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap .date i,
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .date i {
+    content: url(../../../img/nav-triangle-white.svg);
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: .5vw
+}
+
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .description {
+    color: #fff;
+    font-family: RajdhaniMedium;
+    font-size: 1vw;
+    font-weight: 500;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 2vh;
+    padding-right: 3vw;
+    user-select: text
+}
+
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .read-more-btn {
+    position: relative;
+    width: fit-content;
+    background-color: #fff;
+    padding: .375vh 1.3vw .375vh .69445vw;
+    cursor: pointer
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap .play-video-btn span,
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .read-more-btn span {
+    display: inline-block;
+    color: #000;
+    font-family: RajdhaniSemibold;
+    font-size: 1vw;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .read-more-btn i {
+    content: url(../../../img/nav-triangle-black.svg);
+    position: absolute;
+    transform: translateY(-50%) rotate(180deg);
+    top: 50%;
+    right: .5vw
+}
+
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item:active .news-item-wrap .background .image,
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item:focus .news-item-wrap .background .image,
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item:hover .news-item-wrap .background .image {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0)
+}
+
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item:active .news-item-wrap .background .mask,
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item:focus .news-item-wrap .background .mask,
+.news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item:hover .news-item-wrap .background .mask {
+    opacity: .3
+}
+
+.article-content .page-content-block .page-content-wrap aside.article-control-row,
+.news-content .page-content-block .page-content-wrap aside.news-control-row {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 88.75vh
+}
+
+.article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap,
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap {
+    width: 100%;
+    height: 100%;
+    padding: 4.25vh 12.5vw 4.25vh 6.25vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    user-select: none
+}
+
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-nav-block {
+    height: 100%;
+    width: 10.213vw
+}
+
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-nav-block .news-nav-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between
+}
+
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-nav-block .news-nav-wrap .nav-elem {
+    position: relative;
+    width: 46.16%;
+    height: 100%;
+    cursor: pointer;
+    background-color: #fff
+}
+
+.article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap .article-nav-block .article-nav-wrap .nav-elem i,
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-nav-block .news-nav-wrap .nav-elem i {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%
+}
+
+.article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap .article-nav-block .article-nav-wrap .nav-elem span,
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-nav-block .news-nav-wrap .nav-elem span {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    color: #000;
+    font-family: RajdhaniSemibold;
+    font-size: 1vw;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-nav-block .news-nav-wrap .nav-elem.prev i {
+    content: url(../../../img/nav-triangle-black.svg);
+    left: .5vw
+}
+
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-nav-block .news-nav-wrap .nav-elem.prev span {
+    right: .5vw
+}
+
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-nav-block .news-nav-wrap .nav-elem.next i {
+    content: url(../../../img/nav-triangle-white.svg);
+    right: .5vw
+}
+
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-nav-block .news-nav-wrap .nav-elem.next span {
+    left: .5vw
+}
+
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-nav-block .news-nav-wrap .nav-elem.active {
+    background-color: #000
+}
+
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-nav-block .news-nav-wrap .nav-elem.active span {
+    color: #fff
+}
+
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-progress-bar-block {
+    height: 100%;
+    width: 100%;
+    padding-left: 3.4722vw
+}
+
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-progress-bar-block .news-progress-bar-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-progress-bar-block .news-progress-bar-wrap .track {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .3)
+}
+
+.news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-progress-bar-block .news-progress-bar-wrap .track .track-elem {
+    height: inherit;
+    background-color: #fff
+}
+
+.article-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-container {
+    position: absolute;
+    left: 6.25vw;
+    top: 90px;
+    right: 0;
+    bottom: 11.25vh;
+    background-color: #fff;
+    overflow: auto
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-container::-webkit-scrollbar {
+    display: none
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap {
+    width: 100%;
+    height: auto;
+    padding: 22.5vh 26.5vw 8.75vh 18.5vw
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content,
+section.page .content .background {
+    width: 100%;
+    height: 100%
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content h2.title {
+    color: #000;
+    font-family: GothamProMedium;
+    font-size: 5vh;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 4.5vh
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content .date,
+.article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content .post-content p strong {
+    width: fit-content;
+    color: #fff;
+    font-family: RajdhaniBold;
+    font-size: 1vw;
+    font-weight: 700;
+    line-height: 1;
+    background-color: #000;
+    padding: .25vh .5vw;
+    letter-spacing: .045vw;
+    margin-bottom: 4vh;
+    text-transform: uppercase
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content .post-content {
+    word-break: break-word
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content .post-content p {
+    color: #000;
+    font-family: RajdhaniRegular;
+    font-size: 1vw;
+    line-height: 1.5;
+    margin-bottom: 5.5vh;
+    letter-spacing: .045vw
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content .post-content p>img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 6.5vh;
+    object-fit: cover
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-video-container {
+    position: absolute;
+    left: 6.25vw;
+    top: 0;
+    right: 0;
+    bottom: 11.25vh
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap video.player {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: 100%;
+    width: auto;
+    object-fit: cover
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block {
+    position: absolute;
+    left: 3.5vw;
+    bottom: 5vh;
+    z-index: 10;
+    width: 11.75vw;
+    user-select: none
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: normal;
+    width: 100%
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap .date {
+    position: relative;
+    background-color: #000;
+    margin-bottom: 2vh;
+    width: fit-content;
+    padding: .375vh 1.3vw .375vh .69445vw;
+    cursor: pointer
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap .description {
+    color: #fff;
+    font-family: RajdhaniMedium;
+    font-size: 1vw;
+    font-weight: 500;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 2vh;
+    user-select: text
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap .play-video-btn {
+    position: relative;
+    width: fit-content;
+    background-color: #fff;
+    padding: .375vh 1.3vw .375vh .69445vw;
+    cursor: pointer
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap .play-video-btn.play i {
+    content: url(../../../img/content/article/play-btn.svg);
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: .5vw
+}
+
+.article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap .play-video-btn.pause i {
+    content: url(../../../img/content/article/pause-btn.svg);
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: .5vw
+}
+
+.article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap .article-nav-block {
+    height: 100%;
+    width: 10.213vw
+}
+
+.article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap .article-nav-block .article-nav-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between
+}
+
+.article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap .article-nav-block .article-nav-wrap .nav-elem {
+    position: relative;
+    width: 46.16%;
+    height: 100%;
+    cursor: pointer;
+    background-color: #fff
+}
+
+.article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap .article-nav-block .article-nav-wrap .nav-elem.back i {
+    content: url(../../../img/nav-triangle-black.svg);
+    left: .5vw
+}
+
+.article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap .article-nav-block .article-nav-wrap .nav-elem.back span {
+    right: .5vw
+}
+
+.article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap .article-progress-bar-block {
+    height: 100%;
+    width: 100%;
+    padding-left: 3.4722vw
+}
+
+.article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap .article-progress-bar-block .article-progress-bar-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap .article-progress-bar-block .article-progress-bar-wrap .track {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .3)
+}
+
+.article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap .article-progress-bar-block .article-progress-bar-wrap .track .track-elem {
+    width: 0;
+    max-width: 100%;
+    height: inherit;
+    background-color: #fff;
+    transition: all .3s cubic-bezier(.6, 0, .5, 1)
+}
+
+section.page {
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all .8s cubic-bezier(.7, 0, .3, 1)
+}
+
+section.page.active {
+    visibility: visible;
+    opacity: 1
+}
+
+section.page .content {
+    z-index: 5
+}
+
+section.page .content .background .image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 4
+}
+
+section.page .content .background .mask {
+    background: url(../../../img/article-mask.svg);
+    background-size: 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5
+}
+
+@media only all and (min-width:720px) and (max-width:800px) and (orientation:portrait) {
+    section.tablet-lock {
+        display: block!important;
+        position: fixed;
+        z-index: 200;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0
+    }
+    section.tablet-lock .background {
+        width: 100%;
+        height: 100%
+    }
+    section.tablet-lock .background .image {
+        background-image: url(../../../img/content/video/video-bg.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        width: auto;
+        height: 120%;
+        z-index: 4
+    }
+    section.tablet-lock .background .mask {
+        background: url(../../../img/article-mask.svg);
+        background-size: 1px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5
+    }
+    section.tablet-lock span.text {
+        color: #fff;
+        font-family: GothamProMedium;
+        font-size: 13.025vw;
+        font-weight: 500;
+        line-height: 1;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10
+    }
+}
+
+@media only all and (max-width:790px) and (orientation:landscape) {
+    section.tablet-lock {
+        display: block!important;
+        position: fixed;
+        z-index: 200;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0
+    }
+    section.tablet-lock .background {
+        width: 100%;
+        height: 100%
+    }
+    section.tablet-lock .background .image {
+        background-image: url(../../../img/content/video/video-bg.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        width: auto;
+        height: 120%;
+        z-index: 4
+    }
+    section.tablet-lock .background .mask {
+        background: url(../../../img/article-mask.svg);
+        background-size: 1px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5
+    }
+    section.tablet-lock span.text {
+        color: #fff;
+        font-family: GothamProMedium;
+        font-size: 15vh;
+        font-weight: 500;
+        line-height: 1;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10
+    }
+}
+
+@media only all and (max-width:1024px) {
+    section.preloader-progress .progress-wrap .counter {
+        font-size: 2vw!important
+    }
+    section.page .home-content .media .about-slide .image {
+        background-size: cover!important
+    }
+    section.page .about-content .page-content-block .page-content-wrap {
+        left: 60vw;
+        width: 32.5vw
+    }
+    section.page .about-content .page-content-block .page-content-wrap .content {
+        padding: 7vh 5vw
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap {
+        padding: 8.2vh 3vw 4vh
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .title-row .album-title {
+        font-size: 3.5vw;
+        line-height: 1.2
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .album-image {
+        width: 10vw;
+        height: 10vw
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .content-wrap {
+        margin-left: 2.5vw
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .content-wrap .item span.title {
+        font-size: 1.05vw
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .wrap .content-block .content-wrap .item p.text {
+        font-size: 1.05vw;
+        letter-spacing: 1px
+    }
+    section.page .video-content .video-content-block .video-content-wrap .video-content-list .video-list-item .item-wrap .video-item-image .image {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        height: 140%;
+        width: 140%;
+        transform: translate(-50%, -50%)
+    }
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item:last-child {
+        margin-bottom: 100px
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content .date,
+    .article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content .post-content p,
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .date span,
+    section.page .news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-nav-block .news-nav-wrap .nav-elem span {
+        font-size: 1.5vw
+    }
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .description {
+        font-size: 1.75vw
+    }
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .read-more-btn span {
+        font-size: 1.25vw
+    }
+    section.page .news-content .page-content-block .page-content-wrap aside.news-control-row .control-wrap .news-nav-block {
+        width: 13.213vw
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap {
+        padding: 16.5vh 18.5vw 4.75vh 12.5vw
+    }
+    .article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap {
+        padding: 3.75vh 12.5vw 3.75vh 6.25vw
+    }
+    .article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap .article-nav-block .article-nav-wrap .nav-elem {
+        width: 100%
+    }
+    .article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap .article-nav-block .article-nav-wrap .nav-elem.back i {
+        left: 2vw
+    }
+    .article-content .page-content-block .page-content-wrap aside.article-control-row .control-wrap .article-nav-block .article-nav-wrap .nav-elem.back span {
+        font-size: 1.5vw;
+        right: 2vw
+    }
+}
+
+@media only all and (max-width:621px) and (max-height:1105px) {
+    .mob-nav-hide {
+        will-change: opacity, transform;
+        transform: translateZ(0)
+    }
+    section.preloader-progress .progress-wrap {
+        width: 75vw!important
+    }
+    section.preloader-progress .progress-wrap .counter {
+        font-size: 7.5vw!important
+    }
+    section.preloader {
+        display: none!important
+    }
+    nav.nav-block {
+        min-width: auto;
+        width: auto;
+        height: 60px
+    }
+    nav.nav-block a.logo {
+        width: 60px;
+        height: 60px;
+        margin-right: 0
+    }
+    nav.nav-block .nav-mob-btn {
+        position: relative;
+        display: block;
+        width: 60px;
+        height: 60px;
+        background-color: #fff;
+        cursor: pointer
+    }
+    nav.nav-block .nav-mob-btn::before {
+        content: url(../img/response/nav-icon.svg);
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 47%
+    }
+    nav.nav-block .nav-wrap {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 20vw;
+        width: 0;
+        height: 60px;
+        z-index: -1;
+        background-color: #fff;
+        will-change: transform, width, height, opacity;
+        transform: translateZ(0)
+    }
+    nav.nav-block .nav-wrap .nav-list {
+        width: 100%;
+        height: 100%;
+        padding: 21.5vh 0 6.5vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between
+    }
+    nav.nav-block .nav-wrap .nav-list a.nav-elem {
+        opacity: 0;
+        will-change: transform, opacity;
+        transform: translateZ(0)
+    }
+    nav.nav-block .nav-wrap .nav-list a.nav-elem::before {
+        z-index: -1
+    }
+    nav.nav-block .nav-wrap .nav-list a.nav-elem.active::before {
+        width: 50px;
+        height: 20px;
+        background-color: #000
+    }
+    nav.nav-block .nav-wrap .nav-list a.nav-elem.active span {
+        color: #fff
+    }
+    nav.nav-block .nav-wrap .nav-list a.nav-elem span,
+    nav.nav-block .nav-wrap .nav-list span.year {
+        color: #000;
+        opacity: 1;
+        font-family: RajdhaniMedium;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 2
+    }
+    nav.nav-block .nav-wrap .nav-list span.year {
+        opacity: 0;
+        display: block;
+        margin-top: 12.5vh
+    }
+    aside.sidebar-block {
+        display: block;
+        width: 15vw
+    }
+    aside.sidebar-block.active {
+        display: block
+    }
+    aside.sidebar-block .sidebar-wrap .sidebar-list {
+        padding-top: 22.5vh;
+        height: 68.5vh
+    }
+    aside.sidebar-block .sidebar-wrap .sidebar-list .list-elem {
+        font-family: RajdhaniMedium;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+        opacity: 1
+    }
+    aside.sidebar-block .sidebar-wrap .sidebar-zipl {
+        padding-bottom: 7.5vh
+    }
+    aside.sidebar-block .sidebar-wrap .sidebar-zipl a {
+        opacity: 1;
+        width: 10px
+    }
+    aside.video-nav-block,
+    section.page .home-content .article-nav-block .article-nav-wrap .article-nav .counter {
+        display: none
+    }
+    section.video-player .video-player-wrap .view-btn-close {
+        right: 0;
+        top: 0
+    }
+    section.video-player .video-player-wrap .view-btn-close .view-btn-wrap {
+        width: 60px;
+        height: 60px
+    }
+    section.page .home-content .content-slider .content-wrap {
+        height: 100vh
+    }
+    section.page .home-content .content-slider .content-wrap article.content-item {
+        overflow: hidden
+    }
+    section.page .home-content .content-slider .content-wrap article.content-item .background .image {
+        background-position: 50% 50%;
+        transform: scale(1.3);
+        transition: all .6s ease
+    }
+    section.page .home-content .content-slider .content-wrap article.content-item .background .response-image {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        transform: scale(1.3);
+        transition: all .6s ease
+    }
+    section.page .home-content .content-slider .content-wrap article.content-item .background .mask {
+        opacity: .3
+    }
+    section.page .home-content .content-slider .content-wrap article.content-item.swiper-slide-active .background .image,
+    section.page .home-content .content-slider .content-wrap article.content-item.swiper-slide-active .background .response-image {
+        transform: scale(1)
+    }
+    section.page .home-content .content-text-slider .content-text-wrap article.content-text-item .article-text-content {
+        padding: 0 6.3vw 15.5vh
+    }
+    section.page .home-content .content-text-slider .content-text-wrap article.content-text-item .article-text-content .article-text-content-wrap {
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end
+    }
+    section.page .home-content .content-text-slider .content-text-wrap article.content-text-item .article-text-content .article-text-content-wrap h3 {
+        opacity: 0;
+        font-size: 4vw;
+        line-height: 1.3;
+        margin-bottom: 3.5vh;
+        transition: all .5s cubic-bezier(.77, 0, .175, 1)
+    }
+    section.page .home-content .content-text-slider .content-text-wrap article.content-text-item .article-text-content .article-text-content-wrap h2 {
+        opacity: 0;
+        font-size: 12vw;
+        line-height: 1;
+        word-break: break-word;
+        transition: all .5s cubic-bezier(.77, 0, .175, 1)
+    }
+    section.page .home-content .content-text-slider .content-text-wrap article.content-text-item.swiper-slide-active .article-text-content .article-text-content-wrap h3 {
+        transform: translateY(0);
+        opacity: 1
+    }
+    section.page .home-content .content-text-slider .content-text-wrap article.content-text-item.swiper-slide-active .article-text-content .article-text-content-wrap h2 {
+        opacity: 1
+    }
+    section.page .home-content .content-text-slider .content-text-wrap article.content-text-item.swiper-slide-prev .article-text-content .article-text-content-wrap h3 {
+        opacity: 0;
+        transform: translateY(-10px)
+    }
+    section.page .home-content .content-text-slider .content-text-wrap article.content-text-item.swiper-slide-next .article-text-content .article-text-content-wrap h2,
+    section.page .home-content .content-text-slider .content-text-wrap article.content-text-item.swiper-slide-prev .article-text-content .article-text-content-wrap h2 {
+        opacity: 0
+    }
+    section.page .home-content .content-text-slider .content-text-wrap article.content-text-item.swiper-slide-next .article-text-content .article-text-content-wrap h3 {
+        opacity: 0;
+        transform: translateY(10px)
+    }
+    section.page .home-content .article-nav-block .article-nav-wrap .article-nav {
+        bottom: 10vh!important
+    }
+    section.page .home-content .article-nav-block .article-nav-wrap .article-nav .track .track-elem {
+        transition: all .6s ease
+    }
+    section.page .home-content .content-nav {
+        background: 0 0;
+        height: auto
+    }
+    section.page .home-content .content-nav .media,
+    section.page .home-content .content-nav .navigation .controls-row .counter .separator,
+    section.page .home-content .content-nav .navigation .title,
+    section.page .home-content .content-nav .scroll-tooltip {
+        display: none
+    }
+    section.page .home-content .content-nav .navigation {
+        width: 100%;
+        height: auto;
+        background: 0 0;
+        padding: 3vh 6.3vw
+    }
+    section.page .home-content .content-nav .navigation .controls-row {
+        flex-flow: row-reverse nowrap;
+        height: 3.699vh
+    }
+    section.page .home-content .content-nav .navigation .controls-row .counter {
+        flex-flow: row nowrap;
+        width: auto
+    }
+    section.page .home-content .content-nav .navigation .controls-row .counter .elem {
+        opacity: 1
+    }
+    section.page .home-content .content-nav .navigation .controls-row .counter .elem .text {
+        font-size: 13px;
+        line-height: 16px;
+        padding: .5vh 3.125vw 0
+    }
+    section.page .home-content .content-nav .navigation .controls-row .counter .elem.from {
+        position: relative;
+        background-color: #fff;
+        overflow: hidden
+    }
+    section.page .home-content .content-nav .navigation .controls-row .counter .elem.from .text {
+        color: #000
+    }
+    section.page .home-content .content-nav .navigation .controls-row .counter .elem.from::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        will-change: transform;
+        transform: translateZ(0)
+    }
+    section.page .home-content .content-nav .navigation .controls-row .counter .elem.from.next::before {
+        background-color: #000;
+        left: -100%;
+        transition: transform .6s ease;
+        transform: translateX(200%) translateZ(0)
+    }
+    section.page .home-content .content-nav .navigation .controls-row .counter .elem.from.prev:before {
+        background-color: #000;
+        left: 100%;
+        transition: transform .6s ease;
+        transform: translateX(-200%) translateZ(0)
+    }
+    section.page .home-content .content-nav .navigation .controls-row .counter .elem.to {
+        margin-left: 3.125vw;
+        padding-right: 0!important
+    }
+    section.page .home-content .content-nav .navigation .controls-row .counter .elem.to .text {
+        color: #fff
+    }
+    section.page .home-content .content-nav .navigation .controls-row .nav-elems {
+        padding-bottom: 0;
+        width: auto
+    }
+    section.page .home-content .content-nav .navigation .controls-row .nav-elems .elem {
+        font-size: 0;
+        background: 0 0!important;
+        width: 3.699vh;
+        height: 100%
+    }
+    section.page .home-content .content-nav .navigation .controls-row .nav-elems .elem.prev {
+        padding-right: 0
+    }
+    section.page .home-content .content-nav .navigation .controls-row .nav-elems .elem.prev::before {
+        content: url(../img/response/nav-triangle-white-left.svg)!important;
+        left: 0;
+        padding-top: .5vh;
+        transform: none
+    }
+    section.page .home-content .content-nav .navigation .controls-row .nav-elems .elem.next {
+        padding-left: 0
+    }
+    section.page .home-content .content-nav .navigation .controls-row .nav-elems .elem.next::before {
+        content: url(../img/response/nav-triangle-white-right.svg)!important;
+        right: 0;
+        padding-top: .5vh;
+        transform: none
+    }
+    section.page .about-content .background .image {
+        background-position: 50% 50%
+    }
+    section.page .about-content .background .mask {
+        opacity: .3
+    }
+    section.page .about-content .page-title {
+        display: block;
+        width: 100%;
+        right: 0;
+        bottom: auto;
+        height: auto;
+        padding: 19vh 6.3vw 7vh
+    }
+    section.page .about-content .page-title h2 {
+        font-size: 60px;
+        line-height: 1
+    }
+    section.page .about-content .page-title .about-progress-bar,
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .content-block .content-wrap .item .title,
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .content-block .content-wrap .item.lable,
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .content-block .content-wrap .item.produced {
+        display: none
+    }
+    section.page .about-content .page-content-block {
+        top: 42.5vh
+    }
+    section.page .about-content .page-content-block .page-content-wrap {
+        left: 0;
+        right: 0;
+        width: 100%;
+        bottom: 0;
+        top: 0;
+        background-color: transparent
+    }
+    section.page .about-content .page-content-block .page-content-wrap .content {
+        padding: 5vh 7.7vw 15vh
+    }
+    section.page .about-content .page-content-block .page-content-wrap .content h4 {
+        color: #000;
+        background-color: #fff;
+        font-size: 3.75vw;
+        line-height: 1.5;
+        letter-spacing: 1px
+    }
+    section.page .about-content .page-content-block .page-content-wrap .content p em,
+    section.page .about-content .page-content-block .page-content-wrap .content p strong {
+        color: #fff;
+        font-size: 4vw;
+        line-height: 1.6
+    }
+    section.page .music-content .background .image {
+        background-position: 50% 50%
+    }
+    section.page .music-content .background .mask {
+        opacity: .3
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content {
+        display: block;
+        right: 0
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap {
+        padding: 18vh 0 5vh
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .response-background {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-content-back-btn {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        background-color: #000;
+        cursor: pointer;
+        user-select: none
+    }
+    .article-content .page-content-block .page-content-wrap .article-back-btn .wrap,
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-content-back-btn .wrap {
+        position: relative;
+        width: 100%;
+        height: 100%
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-content-back-btn .wrap span {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        color: #fff;
+        font-family: RajdhaniSemibold;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.3;
+        text-transform: uppercase;
+        letter-spacing: 1px
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap h2.album-title {
+        padding: 0 6.25vw;
+        margin-left: 0;
+        font-size: 19vw;
+        line-height: 1
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container {
+        padding: 6.5vh 0 0
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem {
+        height: 4vh
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem.active {
+        height: 6.7vh
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem .elem-row {
+        padding-right: 7.5vw
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem .elem-row .control-btn {
+        width: 17%
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem .elem-row .title {
+        width: 55.5%
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem .elem-row .counter,
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem .elem-row .time,
+    section.page .music-content .page-content-block .page-content-wrap .music-album-content .music-content-wrap .music-container .music-block .music-wrap article.elem .elem-row .title {
+        font-family: RajdhaniMedium;
+        font-size: 3.75vw;
+        font-weight: 500;
+        line-height: 1.3
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container {
+        display: none;
+        left: 0;
+        right: 0
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem {
+        height: 30vh
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .album-background {
+        display: block!important
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .album-background .image,
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .background .image {
+        -webkit-filter: none;
+        filter: none
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .play-btn {
+        display: none!important;
+        visibility: hidden!important;
+        opacity: 0!important
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap {
+        display: block!important;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        width: auto;
+        height: auto;
+        text-align: right;
+        background-color: transparent!important;
+        padding: 10.2vh 7.5vw 5vh 4vw
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .title-row {
+        margin-bottom: 2.25vh
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .title-row .album-title {
+        display: inline-block;
+        color: #fff;
+        background-color: #000;
+        padding: 1px 5px;
+        font-family: RajdhaniBold;
+        font-size: 3.75vw;
+        font-weight: 700;
+        line-height: 1.3;
+        text-transform: uppercase
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .content-block .album-image,
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .title-row .album-subtitle {
+        display: none!important
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .content-block .content-wrap {
+        justify-content: flex-end
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem .elem-content-wrap .content-block .content-wrap .item p.text {
+        color: #fff;
+        font-family: RajdhaniSemibold;
+        font-size: 3.75vw;
+        font-weight: 600;
+        line-height: 1.3;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding-right: 0
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem.active .elem-content-wrap {
+        width: auto;
+        height: auto;
+        padding: 0
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem.active .elem-content-wrap .content-block {
+        width: auto;
+        display: block
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem.active .elem-content-wrap .content-block .content-wrap {
+        display: block;
+        width: auto;
+        height: auto;
+        margin-left: 0
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem.active .elem-content-wrap .content-block .content-wrap .item.release {
+        width: auto;
+        margin-bottom: 0
+    }
+    section.page .music-content .page-content-block .page-content-wrap .music-album-container .music-album-block .music-album-wrap .album-elem.active .elem-content-wrap .content-block .content-wrap .item.release p.text {
+        padding-right: 0;
+        margin-top: 0
+    }
+    section.page .video-content {
+        right: 0
+    }
+    section.page .video-content .background .image {
+        background-position: 50% 50%
+    }
+    section.page .video-content .background .mask {
+        opacity: .3
+    }
+    section.page .video-content .video-content-block .video-content-wrap {
+        padding: 3.75vh 5vw
+    }
+    section.page .video-content .video-content-block .video-content-wrap .video-content-list,
+    section.page .video-content .video-content-block .video-content-wrap .video-content-list .video-list-item .item-wrap {
+        flex-flow: column nowrap
+    }
+    section.page .video-content .video-content-block .video-content-wrap .video-content-list .video-list-item {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 4.5vh;
+        min-height: 40vh;
+        height: auto
+    }
+    section.page .video-content .video-content-block .video-content-wrap .video-content-list .video-list-item .item-wrap .video-item-image {
+        height: 28.25vh;
+        width: 100%;
+        margin-bottom: 3.25vh
+    }
+    section.page .video-content .video-content-block .video-content-wrap .video-content-list .video-list-item .item-wrap .video-item-image .image {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        height: 140%;
+        width: 140%;
+        transform: translate(-50%, -50%)
+    }
+    section.page .video-content .video-content-block .video-content-wrap .video-content-list .video-list-item .item-wrap .video-item-text .video-item-title {
+        font-size: 5vw
+    }
+    section.page .video-content .video-content-block .video-content-wrap .video-content-list .video-list-item .item-wrap .video-item-text .video-item-subtitle {
+        font-size: 2.5vhpu
+    }
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content {
+        left: 0;
+        bottom: 0
+    }
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item {
+        width: 100vw;
+        height: 30vh
+    }
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .background .response-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        display: block;
+        background-position: 50% 50%;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap .play-video-btn i,
+    .article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap a.date i,
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .background .mask,
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .date i,
+    section.page .news-content .page-content-block .page-content-wrap .news-control-row {
+        display: none
+    }
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        opacity: 1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        padding: 4vh 6vw
+    }
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap {
+        align-items: flex-end
+    }
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .date {
+        padding: 0 4px 2px;
+        margin-bottom: 1.2vh
+    }
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .date span {
+        letter-spacing: 1px;
+        font-family: RajdhaniBold;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.3
+    }
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .description {
+        font-family: RajdhaniMedium;
+        font-size: 3.75vw;
+        font-weight: 500;
+        line-height: 1.45;
+        text-align: right;
+        padding-right: 0;
+        margin-bottom: 0;
+        letter-spacing: 1px
+    }
+    section.page .news-content .page-content-block .page-content-wrap .news-article-content .news-article-wrap article.news-item .news-item-wrap .content-block .content-wrap .read-more-btn {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%
+    }
+    .article-content .page-content-block {
+        background-color: #fff;
+        overflow: hidden
+    }
+    .article-content .page-content-block .page-content-wrap .article-back-btn {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        background-color: #000;
+        cursor: pointer;
+        z-index: 10
+    }
+    .article-content .page-content-block .page-content-wrap .article-back-btn .wrap span {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: RajdhaniSemibold;
+        font-size: 3.75vw;
+        font-weight: 600;
+        line-height: 1.3
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-container {
+        display: block;
+        left: 0;
+        bottom: 0
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-container .article-content-block {
+        width: 100%;
+        height: 100%
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap {
+        height: 100%;
+        padding: 0;
+        overflow-x: hidden
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content {
+        height: auto;
+        padding: 3.5vh 6.3vw
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content h2.title {
+        font-size: 7vw;
+        line-height: 1;
+        margin-bottom: 6vh
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content .date {
+        font-family: RajdhaniBold;
+        font-size: 3.75vw;
+        font-weight: 700;
+        line-height: 1.3;
+        padding: 0 4px 1px;
+        letter-spacing: 1px;
+        margin-bottom: 2.5vh
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content .post-content p {
+        font-family: RajdhaniMedium;
+        font-size: 4vw;
+        font-weight: 500;
+        line-height: 1.6;
+        letter-spacing: 1px
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content .post-content p strong {
+        display: inline;
+        font-family: RajdhaniBold;
+        font-size: 3.75vw;
+        font-weight: 700;
+        line-height: 1.3;
+        padding: 0 4px 1px;
+        letter-spacing: 1px;
+        margin-bottom: 2.5vh
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-container .article-content-block .article-content-wrap .article-news-content .post-content p img {
+        margin-bottom: 6vh;
+        transform: scale(1.2);
+        height: 32vh;
+        background-position: 50% 50%
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-video-container {
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block {
+        left: 5vw;
+        bottom: 15vh;
+        width: auto
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap .play-video-btn span,
+    .article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap a.date span {
+        font-family: RajdhaniBold;
+        font-size: 3.75vw;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: 1px
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap .description {
+        font-family: RajdhaniMedium;
+        font-size: 3.5vw;
+        font-weight: 500;
+        line-height: 1.45;
+        letter-spacing: 1px
+    }
+    .article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap .play-video-btn,
+    .article-content .page-content-block .page-content-wrap .article-content-video-container .article-content-video-wrap .video-description-block .video-description-wrap a.date {
+        padding: 0 4px 1px
+    }
+    .article-content .page-content-block .page-content-wrap .article-control-row {
+        background-color: #000
+    }
+    .article-content .page-content-block .page-content-wrap .article-control-row .control-wrap {
+        padding: 4.25vh 0 4.25vh 6.25vw!important
+    }
+    #awwwards,
+    .article-content .page-content-block .page-content-wrap .article-control-row .control-wrap .article-nav-block {
+        display: none
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    display: block;
+    box-sizing: border-box;
+    outline: 0;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none
+}
+
+body,
+section.preloader-progress {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0
+}
+
+body {
+    right: 0;
+    background: #000;
+    overflow: hidden
+}
+
+section.tablet-lock {
+    display: none
+}
+
+section.preloader-progress {
+    width: 100%;
+    background-color: #000;
+    z-index: 2000
+}
+
+section.preloader-progress.active {
+    visibility: visible
+}
+
+section.preloader-progress.hidden {
+    visibility: hidden
+}
+
+section.preloader-progress .progress-wrap {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 420px;
+    height: 100px
+}
+
+section.preloader-progress .progress-wrap .counter {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: RajdhaniSemibold;
+    color: #000;
+    font-size: 1.5vw;
+    z-index: 5
+}
+
+section.preloader-progress .progress-wrap .lines-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden
+}
+
+section.preloader-progress .progress-wrap .lines-wrap .line {
+    display: block;
+    width: 100%;
+    transform: translateX(-100%);
+    height: calc(100%/8);
+    background-color: #fff
+}
+
+section.preloader,
+section.video-content-mask {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000
+}
+
+section.preloader {
+    display: block;
+    width: 0;
+    animation-timing-function: cubic-bezier(.7, 0, .3, 1);
+    animation-duration: 800ms;
+    will-change: width, transform;
+    transform: translateZ(0);
+    opacity: 1;
+    position: fixed;
+    z-index: 1000
+}
+
+section.preloader.overlay-slide-in-right {
+    animation-name: overlay-slide-in-right
+}
+
+section.preloader.overlay-slide-out-left {
+    animation-name: overlay-slide-out-left
+}
+
+section.video-content-mask {
+    position: absolute;
+    opacity: .9;
+    z-index: 15;
+    transition: all .5s cubic-bezier(.215, .61, .355, 1)
+}
+
+section.video-content-mask.hidden {
+    visibility: hidden;
+    opacity: 0
+}
+
+section.video-content-mask.visible {
+    visibility: visible;
+    opacity: .9
+}
